@@ -1,3 +1,107 @@
+Eldrenn — 2D RTS Game
+
+A classic real-time strategy game developed with Unity 2022 LTS (2D Template), featuring complete RTS core gameplay including unit control, combat, resource gathering and base building.
+
+✨ Core Features
+
+🎯 Unit Control System
+
+- Flexible Selection: Single unit selection via left-click, multi-unit box selection by mouse dragging
+
+- Intelligent Movement: Right-click ground to move units; multiple units automatically spread out for formation landing
+
+- Selection Feedback: Selected units are highlighted in yellow with permanent health bar display
+
+⚔️ Combat System
+
+- Auto Target & Chase: Melee units actively detect nearby enemies and initiate combat automatically
+
+- Animation-Driven Damage: Attack actions trigger Animator parameters, with damage calculated at precise animation frames
+
+- Dynamic Health Bar: Floating HP bars with color gradient (Green → Yellow → Red) based on remaining health; hidden automatically when full HP
+
+- Standard Death Logic: Dead units disable colliders and fade out transparently; buildings support instant destruction on death
+
+🌲 Resource System
+
+- Three Core Resources: Complete resource loop of Wood, Gold and Meat
+
+- Auto Gathering AI: Villagers intelligently locate the nearest resource node, move and gather resources with dedicated animations and real-time resource settlement
+
+- Dynamic Resource Nodes: Gold mines shrink progressively during mining; trees leave stumps after being harvested
+
+🏗️ Building System
+
+- Preview Placement Mechanic: Semi-transparent building preview follows mouse cursor; left-click to place, right-click to cancel
+
+- Resource Verification: Automatically detect insufficient resources and restrict building placement
+
+👥 Unit Recruitment System
+
+- Building-Based Spawning: Open recruitment panel by clicking functional buildings, consume resources to spawn units
+
+- Independent Cooldown: Each unit type has an exclusive recruitment cooldown timer
+
+🤖 Diverse Unit Types
+
+- Warrior: Melee combat unit; G key for defense stance, 1/2 keys for skill attacks
+
+- Healer: Intelligent support unit, automatically heals the lowest-HP allied unit in range
+
+- Villager: Civilian unit responsible for full-process automatic resource collection
+
+- Sheep: Neutral creature with threat detection, automatically flees from enemy units
+
+🛠 Tech Stack
+
+- Engine: Unity 2022 LTS
+
+- Rendering: Native 2D Pipeline (URP optional)
+
+- Core Packages: Cinemachine, Input System, 2D Tilemap, TextMeshPro, Visual Scripting
+
+▶️ Run Instructions
+
+1. Open the project folder via Unity Hub
+
+2. Load the SampleScene scene file
+
+3. Click the Play button to start the game
+
+⌨️ Operation Controls
+
+In-Game Action
+
+Key / Operation
+
+Camera Movement
+
+WASD
+
+Select Units
+
+Left-Click / Drag Box Selection
+
+Command Unit Movement
+
+Right-Click on Ground
+
+Warrior Defense Stance
+
+G
+
+Warrior Attack Skills
+
+1 / 2
+
+Build Structures
+
+Click Building Buttons
+
+Recruit Units
+
+Click Buildings to Open Recruitment Panel
+
 # Eldrenn — 2D RTS 游戏
 
 一个使用 **Unity 2022 LTS** (2D 模板) 开发的实时策略游戏。
