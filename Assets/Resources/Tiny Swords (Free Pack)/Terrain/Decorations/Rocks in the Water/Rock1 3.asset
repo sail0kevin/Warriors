@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:yousandi.cn,2023:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: Rock1 3
+  m_EditorClassIdentifier: 
+  m_AnimatedSprites:
+  - {fileID: -628688116, guid: bc74eb4942d80304a87a4b5a9756e5b4, type: 3}
+  - {fileID: -1524238394, guid: bc74eb4942d80304a87a4b5a9756e5b4, type: 3}
+  - {fileID: 539168639, guid: bc74eb4942d80304a87a4b5a9756e5b4, type: 3}
+  - {fileID: 926151642, guid: bc74eb4942d80304a87a4b5a9756e5b4, type: 3}
+  - {fileID: 133586067, guid: bc74eb4942d80304a87a4b5a9756e5b4, type: 3}
+  - {fileID: -28287078, guid: bc74eb4942d80304a87a4b5a9756e5b4, type: 3}
+  - {fileID: -1335970251, guid: bc74eb4942d80304a87a4b5a9756e5b4, type: 3}
+  - {fileID: 1089240759, guid: bc74eb4942d80304a87a4b5a9756e5b4, type: 3}
+  - {fileID: -1573623321, guid: bc74eb4942d80304a87a4b5a9756e5b4, type: 3}
+  - {fileID: 2027024734, guid: bc74eb4942d80304a87a4b5a9756e5b4, type: 3}
+  - {fileID: 150989091, guid: bc74eb4942d80304a87a4b5a9756e5b4, type: 3}
+  - {fileID: 1509152288, guid: bc74eb4942d80304a87a4b5a9756e5b4, type: 3}
+  - {fileID: 1782802508, guid: bc74eb4942d80304a87a4b5a9756e5b4, type: 3}
+  - {fileID: 807488086, guid: bc74eb4942d80304a87a4b5a9756e5b4, type: 3}
+  - {fileID: 69153212, guid: bc74eb4942d80304a87a4b5a9756e5b4, type: 3}
+  - {fileID: 1403716952, guid: bc74eb4942d80304a87a4b5a9756e5b4, type: 3}
+  m_MinSpeed: 5
+  m_MaxSpeed: 5
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 0
+  m_TileColliderType: 2
+  m_TileAnimationFlags: 0
