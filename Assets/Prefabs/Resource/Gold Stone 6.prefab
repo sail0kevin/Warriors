@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:yousandi.cn,2023:
---- !u!1 &5577138418539129492
+--- !u!1 &8106783146226808440
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,41 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 7
   m_Component:
-  - component: {fileID: 258658290410056257}
-  - component: {fileID: 6651824435515275200}
-  - component: {fileID: 9189184700860345503}
-  - component: {fileID: 1204534650394537628}
-  - component: {fileID: 5941691078183637601}
-  m_Layer: 8
+  - component: {fileID: 3586229994797213408}
+  - component: {fileID: 209002293957225320}
+  - component: {fileID: 3969153298036746689}
+  - component: {fileID: 1364430692278338530}
+  m_Layer: 0
   m_HasEditorInfo: 1
-  m_Name: House3
-  m_TagString: Player
+  m_Name: Gold Stone 6
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &258658290410056257
+--- !u!4 &3586229994797213408
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5577138418539129492}
+  m_GameObject: {fileID: 8106783146226808440}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.524542, y: -4.1332808, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -13.31, y: 8.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &6651824435515275200
+--- !u!212 &209002293957225320
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5577138418539129492}
+  m_GameObject: {fileID: 8106783146226808440}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -79,25 +78,42 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: eccb3633fdd5fd04ba93c428f6b67a1f, type: 3}
+  m_SortingOrder: 3
+  m_Sprite: {fileID: 21300000, guid: bf3152964bd9f0549ae836b746a3c543, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.28, y: 1.92}
+  m_Size: {x: 1.28, y: 1.28}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &9189184700860345503
+--- !u!114 &3969153298036746689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8106783146226808440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68deb52d9d272a749985fab238871b91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resourceType: 1
+  amount: 1000
+  gatherRadius: 1
+  useScaleDepletion: 1
+  depletedPrefab: {fileID: 0}
+--- !u!61 &1364430692278338530
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5577138418539129492}
+  m_GameObject: {fileID: 8106783146226808440}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -125,49 +141,15 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeLayer: 0
-  m_Offset: {x: 0, y: -0.045356512}
+  m_Offset: {x: 0.013054848, y: 0.12551022}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.92}
-    newSize: {x: 1.28, y: 1.92}
+    oldSize: {x: 1.28, y: 1.28}
+    newSize: {x: 1.28, y: 1.28}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.28, y: 1.829287}
+  m_Size: {x: 0.6794834, y: 0.7999573}
   m_EdgeRadius: 0
---- !u!114 &1204534650394537628
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5577138418539129492}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27328d5b65f133a45ae7f9a6df061546, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
-  destroyOnDeath: 1
-  barWidth: 1.2
-  barHeight: 0.12
-  yOffset: 0.6
-  hideThreshold: 0.99
-  highHealthColor: {r: 0.2, g: 0.8, b: 0.2, a: 1}
-  midHealthColor: {r: 0.9, g: 0.8, b: 0.1, a: 1}
-  lowHealthColor: {r: 0.9, g: 0.1, b: 0.1, a: 1}
---- !u!114 &5941691078183637601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5577138418539129492}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c77dee81c3d91f44da0d88f1086be747, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  populationBonus: 20

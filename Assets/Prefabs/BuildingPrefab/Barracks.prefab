@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 836464915326867191}
   - component: {fileID: 2221695498350234567}
   - component: {fileID: 5770257945237637577}
+  - component: {fileID: -4815783831444128656}
   m_Layer: 8
   m_HasEditorInfo: 1
   m_Name: Barracks
@@ -171,11 +172,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnOffset: {x: 1, y: 0, z: 0}
+  recruitPanel: {fileID: 0}
   recruitOptions:
   - unitPrefab: {fileID: 8937605862550151531, guid: 4c28a804a55c4e740bc32ee38d28e507, type: 3}
     woodCost: 20
     meatCost: 100
     goldCost: 10
+    populationCost: 1
     coolDown: 0
     currentCoolDown: 0
-    canRecruit: 0
+--- !u!114 &-4815783831444128656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9087592149628299262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c77dee81c3d91f44da0d88f1086be747, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  populationBonus: 50

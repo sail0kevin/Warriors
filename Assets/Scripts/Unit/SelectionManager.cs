@@ -211,6 +211,10 @@ public class SelectionManager : MonoBehaviour
                 (row - (rows - 1) * 0.5f) * spacing
             );
             selectedUnits[i].SetMoveTarget(target + offset);
+
+            // 农民右键移动时中断当前采集
+            var gatherer = selectedUnits[i].GetComponent<UnitGatherer>();
+            if (gatherer != null) gatherer.StopGathering();
         }
     }
 

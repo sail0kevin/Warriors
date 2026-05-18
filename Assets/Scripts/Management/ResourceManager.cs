@@ -1,9 +1,7 @@
 using UnityEngine;
 
-// 必须和文件名一致
 public class ResourceManager : MonoBehaviour
 {
-    // 全局唯一单例（修复Instance报错）
     public static ResourceManager Instance { get; private set; }
 
     [Header("初始资源")]
@@ -11,12 +9,18 @@ public class ResourceManager : MonoBehaviour
     public int meat = 1000;
     public int wood = 1000;
 
+    [Header("人口")]
+    public int currentPopulation = 0;
+    public int maxPopulation = 0;
+    public const int POPULATION_CAP = 200;
+
     void Awake()
     {
         Instance = this;
     }
 
-    // 增加资源
+    // ==================== 资源 ====================
+
     public void AddResource(string type, int amount)
     {
         switch (type.ToLower())
@@ -27,8 +31,7 @@ public class ResourceManager : MonoBehaviour
         }
         UIManager.Instance?.UpdateResourceUI();
     }
-    
-    // 检查资源是否足够（建造前预检查）
+
     public bool HasEnoughResource(string type, int amount)
     {
         switch (type.ToLower())
@@ -40,7 +43,6 @@ public class ResourceManager : MonoBehaviour
         }
     }
 
-    // 扣除资源
     public bool SpendResource(string type, int amount)
     {
         bool enough = false;
@@ -52,5 +54,47 @@ public class ResourceManager : MonoBehaviour
         }
         if (enough) UIManager.Instance?.UpdateResourceUI();
         return enough;
+    }
+
+    // ==================== 人口 ====================
+
+    /// <summary>建筑生成时调用，增加人口上限（不超过全局上限200）</summary>
+    public void AddMaxPopulation(int amount)
+    {
+        maxPopulation += amount;
+        if (maxPopulation > POPULATION_CAP)
+            maxPopulation = POPULATION_CAP;
+        UIManager.Instance?.UpdateResourceUI();
+    }
+
+    /// <summary>建筑销毁时调用，减少人口上限</summary>
+    public void RemoveMaxPopulation(int amount)
+    {
+        maxPopulation -= amount;
+        if (maxPopulation < 0) maxPopulation = 0;
+        if (currentPopulation > maxPopulation)
+            currentPopulation = maxPopulation;
+        UIManager.Instance?.UpdateResourceUI();
+    }
+
+    /// <summary>招募单位时检查人口是否足够</summary>
+    public bool HasPopulationCapacity(int amount)
+    {
+        return currentPopulation + amount <= maxPopulation;
+    }
+
+    /// <summary>招募单位时消耗人口</summary>
+    public void UsePopulation(int amount)
+    {
+        currentPopulation += amount;
+        UIManager.Instance?.UpdateResourceUI();
+    }
+
+    /// <summary>单位死亡时释放人口</summary>
+    public void ReleasePopulation(int amount)
+    {
+        currentPopulation -= amount;
+        if (currentPopulation < 0) currentPopulation = 0;
+        UIManager.Instance?.UpdateResourceUI();
     }
 }

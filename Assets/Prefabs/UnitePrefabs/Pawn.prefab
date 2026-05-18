@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6922732813987513256}
   - component: {fileID: 4352842209554235520}
   - component: {fileID: -7287675362956107869}
+  - component: {fileID: -7773440193224272448}
   m_Layer: 8
   m_HasEditorInfo: 1
   m_Name: Pawn
@@ -246,3 +247,16 @@ MonoBehaviour:
   gatherAmount: 5
   gatherCooldown: 1.5
   gatherTriggerPrefix: Gather
+--- !u!114 &-7773440193224272448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5838411332780938636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0b6862feed4044448271789651fa9ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  populationCost: 1

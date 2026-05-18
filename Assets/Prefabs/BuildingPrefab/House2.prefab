@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6402727026829019037}
   - component: {fileID: 7275070747112606532}
   - component: {fileID: 3656717476915422860}
+  - component: {fileID: -7734335650445087799}
   m_Layer: 8
   m_HasEditorInfo: 1
   m_Name: House2
@@ -157,3 +158,16 @@ MonoBehaviour:
   highHealthColor: {r: 0.2, g: 0.8, b: 0.2, a: 1}
   midHealthColor: {r: 0.9, g: 0.8, b: 0.1, a: 1}
   lowHealthColor: {r: 0.9, g: 0.1, b: 0.1, a: 1}
+--- !u!114 &-7734335650445087799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8185201603436481965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c77dee81c3d91f44da0d88f1086be747, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  populationBonus: 20

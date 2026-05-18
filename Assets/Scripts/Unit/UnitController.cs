@@ -21,7 +21,7 @@ public class UnitController : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim;
     private Vector2 targetPos;
-    private bool isMoving;
+    public bool IsMoving { get; private set; }
     private float lastDistanceToTarget;
     private float noProgressTimer;
     private bool combatRooting;
@@ -62,7 +62,7 @@ public class UnitController : MonoBehaviour
         Vector2 pos = transform.position;
         float dis = Vector2.Distance(pos, targetPos);
 
-        if (!isMoving)
+        if (!IsMoving)
         {
             rb.velocity = Vector2.zero;
             if (anim != null) anim.SetBool("IsMoving", false);
@@ -99,7 +99,7 @@ public class UnitController : MonoBehaviour
 
     void StopMoving()
     {
-        isMoving = false;
+        IsMoving = false;
         noProgressTimer = 0f;
         rb.velocity = Vector2.zero;
         if (anim != null)
@@ -110,7 +110,7 @@ public class UnitController : MonoBehaviour
     {
         combatRooting = false;
         targetPos = pos;
-        isMoving = true;
+        IsMoving = true;
         lastDistanceToTarget = Vector2.Distance(transform.position, targetPos);
         noProgressTimer = 0f;
     }

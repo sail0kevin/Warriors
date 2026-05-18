@@ -22,6 +22,7 @@ public class UnitGatherer : MonoBehaviour
     SpriteRenderer spriteRenderer;
     Collider2D bodyCollider;
     ResourceNode currentTarget;
+    public ResourceNode CurrentTarget => currentTarget;
     float nextGatherTime;
     bool gatherRoutineRunning;
 
@@ -33,8 +34,27 @@ public class UnitGatherer : MonoBehaviour
         bodyCollider = GetComponent<Collider2D>();
     }
 
+    private bool interrupted; // 玩家手动移动后等待到达
+
+    /// <summary>玩家右键移动时调用，中断当前采集</summary>
+    public void StopGathering()
+    {
+        currentTarget = null;
+        interrupted = true;
+        StopAllCoroutines();
+        gatherRoutineRunning = false;
+        unit.SetCombatRooting(false);
+    }
+
     void Update()
     {
+        // 被玩家中断后：等单位移动到目的地再恢复自动采集
+        if (interrupted)
+        {
+            if (unit.IsMoving) return;   // 还在移动中，继续等
+            interrupted = false;          // 已到达，恢复自动采集
+        }
+
         if (currentTarget == null || currentTarget.amount <= 0)
             currentTarget = FindNearestResource();
 
@@ -91,6 +111,13 @@ public class UnitGatherer : MonoBehaviour
     {
         gatherRoutineRunning = true;
         nextGatherTime = Time.time + gatherCooldown;
+
+        // 如果采集目标是羊 → 抓住冻住
+        if (currentTarget != null)
+        {
+            var sheep = currentTarget.GetComponent<SheepAI>();
+            if (sheep != null) sheep.Freeze();
+        }
 
         // 播放对应动画
         if (anim != null && currentTarget != null)

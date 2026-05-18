@@ -46,7 +46,7 @@ public class BuildingPlacementManager : MonoBehaviour
         // 1. 点击建造按钮，自动关闭所有招募面板
         if (PanelManager.Instance != null)
         {
-            PanelManager.Instance.CloseAllPanels();
+            PanelManager.Instance.CloseCurrentPanel();
         }
 
         currentBuildingButton = button;

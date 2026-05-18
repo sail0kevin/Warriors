@@ -30,7 +30,7 @@ public class UIPanelToggle : MonoBehaviour
             // 打开面板前，先关闭所有其他面板（招募面板会被关掉）
             if (PanelManager.Instance != null)
             {
-                PanelManager.Instance.CloseAllPanels();
+                PanelManager.Instance.CloseCurrentPanel();
             }
 
             // 打开当前建筑面板

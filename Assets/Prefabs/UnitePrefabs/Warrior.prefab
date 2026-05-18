@@ -16,10 +16,11 @@ GameObject:
   - component: {fileID: 7883800806463325715}
   - component: {fileID: -7958218450721804214}
   - component: {fileID: 1634931041072901305}
+  - component: {fileID: 6285395601525386915}
   m_Layer: 9
   m_HasEditorInfo: 1
   m_Name: Warrior
-  m_TagString: Enemy
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -247,3 +248,17 @@ MonoBehaviour:
   highHealthColor: {r: 0.2, g: 0.8, b: 0.2, a: 1}
   midHealthColor: {r: 0.9, g: 0.8, b: 0.1, a: 1}
   lowHealthColor: {r: 0.9, g: 0.1, b: 0.1, a: 1}
+--- !u!114 &6285395601525386915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5061705976068072732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0b6862feed4044448271789651fa9ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  populationCost: 1
+  recruited: 0
